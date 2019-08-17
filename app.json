@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/doodle/doodle",
+    "pages/doodlecontent/doodlecontent",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/pickdoodle/pickdoodle"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "Google Doodles",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

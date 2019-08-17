@@ -1,0 +1,41 @@
+/* pages/pickdoodle/pickdoodle.wxss */
+@import "../style/font.wxss";
+
+text{
+  font-family: 'Roboto', arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+  display: block;
+  font-size: 15px;
+  text-align: center;
+}
+
+.strongtext{
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.pickdoodle {
+  height: 200px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 10px 25px;
+  background-color: #fff;
+  border: thin solid #fff;
+  box-shadow: 0px 2px 10px #dcdde1;
+  position: relative;
+ 
+  opacity: 0;
+}
+
+.pickImg{
+  margin-top: 5px;
+  height: 160px;
+}
+
+.rotateimg{
+  margin: 30px auto;
+  border-radius: 10px;
+}

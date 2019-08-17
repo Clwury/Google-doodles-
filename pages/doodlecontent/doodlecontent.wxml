@@ -1,0 +1,36 @@
+<!--pages/doodlecontent/doodlecontent.wxml-->
+<view class='container'>
+  <view class='viewcss'>
+    <view class='left' catchtap='clickLeft'>
+      <image class='img' src='../resource/left.png' mode='aspectFill'></image>
+    </view>
+    <image src="{{doodlecontent.high_res_url}}" class='contentImg' mode='aspectFit'></image>
+    <view class='right' catchtap='clickRight'>
+      <image class='img' src='../resource/right.png' mode='aspectFill'></image>
+    </view>
+  </view>
+  <view class='doodle-card'>
+    <text>{{doodlecontent.run_date_array}}</text>
+    <text class='strongtext'>{{doodlecontent.title}}</text>
+  </view>
+  <view class='doodle-card' wx:if="{{doodlecontent.zh_cn_content != '' || doodlecontent.contentImg}}">
+    <text decode='true' wx:if="{{doodlecontent.zh_cn_content != ''}}">{{doodlecontent.zh_cn_content}}</text>
+    <!--<text>今天的涂鸦庆祝Lucha Reyes，一位秘鲁歌手，他的强大而敏锐的声音让人们深受感动。雷耶斯于1936年出生于利马的里马克区，成为一个有15个兄弟的贫困家庭，后来成为她所在国家最受欢迎的歌手之一。</text>
+    <text decode='true'>&nbsp;</text>
+    <text>通过出售报纸，洗衣服以及在餐厅厨房长时间工作来支持自己，在El sentir de los barrios工作时发现了雷耶斯的声音天赋，这是一个克里奥尔俱乐部，其名字的意思是“邻里的感觉。”很快她就开始表演了。在Pizarro剧院等场地和“PeñaFerrando”上演唱，Augusto Ferrando在维多利亚广播电台上的流行节目。</text>
+    <text decode='true'>&nbsp;</text>
+    <text>1970年，她发行了她的第一张专辑“ La morena de orodelPerú”（秘鲁的金色黑发），其中包括秘鲁众所周知的歌曲，如Regresa。这部Vals Criollo（秘鲁华尔兹）采用两把吉他和一个叫做cajón的箱形鼓，改编了欧洲音乐形式和南美军刀。Lucha Reyes对歌词的“令人心碎的演绎”如“回来，即使它要说再见”，这使其成为她最大的热门歌曲之一。</text>
+    <text decode='true'>&nbsp;</text>
+    <text>在她的职业生涯中，雷耶斯帮助推广了músicacudolla，这是一种独特的克里奥尔音乐风格，融合了非洲裔 - 秘鲁和安第斯音乐传统，表达了日常生活的感受。她生命的最后一天，即10月31日，恰好与DíadelaCanciónCriolla（“克里奥尔之歌日”）相吻合，让她的遗产和未来世代保持活力。</text>
+    <text decode='true'>&nbsp;</text>
+    <text>艺术家Sophie Diao的早期概念草图</text>-->
+    <block wx:if="{{doodlecontent.contentImg}}">
+      <view class='viewcss1' wx:for="{{doodlecontent.contentImg}}" wx:for-item="arrImg">
+        <image class='bottomImg' src="{{arrImg}}" mode='widthFix'></image>
+      </view>
+    </block>
+  </view>
+  <!--<view class='doodle-card'>
+    <text class='strongtext'>历史上的今天</text>
+  </view>-->
+</view>

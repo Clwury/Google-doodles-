@@ -1,0 +1,16 @@
+<!--pages/pickdoodle/pickdoodle.wxml-->
+<view class='container'>
+  <text style="margin-top:10px; color:#e1b12c; font-size:20px;">{{"历史上的"+ pickdate}}</text>
+  <block wx:if="{{pickdoodle.length > 0}}">
+    <view class='pickdoodle' bindtap="pickClick" id="{{index}}" wx:for="{{pickdoodle}}" wx:for-index="index" wx:for-item="pickitem" wx:key="{{id}}" animation="{{glideAnimation}}" style="top:{{height+'px'}}">
+      <image class='pickImg' src="{{pickitem.url}}" mode='aspectFit'></image>
+      <text>{{pickitem.title}}</text>
+    </view>
+  </block>
+  <block wx:else>
+    <view style="text-align: center; position: relative; top: {{height+'px'}}" animation="{{voidglideAnimation}}">
+      <text class="strongtext">This day is a day for everyone</text>
+      <image style="width:{{width/1.2+'px'}}; height:{{width/1.2/1.7+'px'}}" class="rotateimg" src='../resource/original.png' animation="{{rotate}}"></image>
+    </view>
+  </block>
+</view>

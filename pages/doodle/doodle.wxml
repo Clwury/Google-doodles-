@@ -1,0 +1,50 @@
+<!--pages/doodle/doodle.wxml-->
+<view class="container">
+  <swiper style="margin-top: 25px; width: 100%; height: 280px;" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{newdoodle}}" wx:for-index="idx" wx:for-item="doodleitem" wx:key="{{id}}">
+      <swiper-item class='swiper-item' bindtap="handleClick" id="{{idx}}">
+        <view class='newdoodles'>
+          <image src="{{doodleitem.url}}" class="slide-image" mode='aspectFit' />
+          <text class='strongtext'>{{doodleitem.title}}</text>
+          <text style="margin-bottom: 5px;">{{doodleitem.run_date_array}}</text>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <text style="margin-left:15px; color:#e1b12c; font-size:16px;">近期发布</text>
+  <scroll-view scroll-x class="recentdoodles">
+    <block wx:for="{{recentdoodle}}" wx:for-index="index" wx:for-item="recentitem" wx:key="{{id}}">
+      <view class="doodle-item" bindtap="onClick" id="{{index}}">
+        <image class="doodleimg" src="{{recentitem.url}}" mode='aspectFit'></image>
+        <text class='recenttext'>{{recentitem.run_date_array}}</text>
+      </view>
+    </block>
+    <!--<view class="doodle-item" bindtap="handleClick">
+      <image class="doodleimg" src='../resource/tanabata-2019.png' mode='aspectFit'></image>
+      <text class='recenttext'>2019年7月14日</text>
+    </view>
+    <view class="doodle-item" bindtap="handleClick">
+      <image class="doodleimg" src='../resource/fathers-day-2019.png' mode='aspectFit'></image>
+      <text class='recenttext'>2019年7月13日</text>
+    </view>-->
+  </scroll-view>
+  <block wx:if="{{historydoodle.length > 0}}">
+    <text style="margin-left:15px; color:#e1b12c; font-size:16px;">历史上的今天</text>
+    <view class='historydoodle' bindtap="historyClick" id="{{index}}" wx:for="{{historydoodle}}" wx:for-index="index" wx:for-item="historyitem" wx:key="{{id}}">
+      <image class='historyImg' src="{{historyitem.url}}" mode='aspectFit'></image>
+    </view>
+  </block>
+</view>
+<view class='box' style="right:{{width/20+'px'}}; bottom:{{height/16+'px'}}">
+  <view class='sendground' bindtap='randomgoogle' animation="{{sendAnimation}}">
+    <image class='sendimg' src='../resource/send1.png'></image>
+  </view>
+  <view class='aimground' animation="{{aimAnimation}}">
+    <picker class="pick" mode="date" value="{{date}}" start="1998-08-30" end="2019-12-30" bindchange="bindDateChange">
+      <image class='aimimg' src='../resource/aim1.png'></image>
+    </picker>
+  </view>
+  <view class='findground' bindtap='{{find}}' animation="{{findAnimation}}">
+    <image class='findimg' src='../resource/find1.png'></image>
+  </view>
+</view>

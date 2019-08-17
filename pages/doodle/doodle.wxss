@@ -1,0 +1,149 @@
+/* pages/doodle/doodle.wxss */
+@import "../style/font.wxss";
+
+.newdoodles {
+  height: 240px;
+  text-align: center;
+  border-radius: 15px;
+  margin: 0 25px;
+  background-color: #fff;
+  border: thin solid #fff;
+  box-shadow: 0px 2px 10px #dcdde1;
+}
+
+text {
+  font-family: 'Roboto', arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+  display: block;
+  font-size: 16px;
+  margin: 0 10px;
+  text-align: left;
+}
+.strongtext{
+  margin-top: 10px; 
+  margin-bottom: 3px;
+  font-size: 18px; 
+  font-weight: 500;
+}
+
+.slide-image {
+  margin: 0;
+  height: 150px;
+}
+
+.recentdoodles {
+  margin: 10px 0;
+  width: 100%;
+  height: 150px;
+  white-space: nowrap;
+}
+
+.doodle-item {
+  width: 280px;
+  margin-left: 5px;
+  display: inline-block;
+  text-align: center;
+}
+
+.doodleimg {
+  width: 270px;
+  height: 120px;
+  margin: 0;
+}
+
+.recenttext {
+  line-height: 1.2em;
+  font-size: 15px;
+  margin: 0;
+  text-align: center;
+}
+
+.historydoodle {
+  height: 180px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 10px 25px;
+  background-color: #fff;
+  border: thin solid #fff;
+  box-shadow: 0px 2px 10px #dcdde1;
+}
+
+.historyImg{
+  height: 180px;
+}
+
+.box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 55px;
+  height: auto;
+  position: fixed;
+  /*right: 5vw;
+  bottom: 8vh;*/
+}
+.findground{
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border: thin solid rgb(240, 240, 240);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 10px #dcdde1;
+}
+
+.findimg{
+  width: 35px;
+  height: 35px;
+}
+
+.sendground{
+  width: 45px;
+  height: 45px;
+  background-color: #fff;
+  border: thin solid #ededf0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*box-shadow: 0px 2px 10px #dcdde1;
+  bottom: 18vh;
+  bottom: 8vh;*/
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.sendimg{
+  width: 35px;
+  height: 35px;
+}
+
+.aimground{
+  width: 45px;
+  height: 45px;
+  background-color: #fff;
+  border: thin solid #ededf0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  /*box-shadow: 0px 2px 10px #dcdde1;
+  bottom: 26vh;
+  bottom: 8vh;*/
+  bottom: 0;
+  position:absolute;
+  z-index: -1;
+}
+
+.pick{
+  height: 35px;
+}
+
+.aimimg{
+  width: 35px;
+  height: 35px;
+}
